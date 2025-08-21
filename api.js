@@ -122,6 +122,35 @@ export function mutateCreateSubmission({ slug }) {
   };
 }
 
+export function mutateCreatePiece() {
+  return async ({
+    name,
+    slug,
+    ensemble_type,
+    composer,
+    accompaniment,
+    video,
+    parts,
+  }) => {
+    const endpoint = `pieces/`;
+
+    const body = {
+      name,
+      slug,
+      ensemble_type,
+      composer,
+      accompaniment,
+      video: '',
+      parts,
+    };
+
+    const json = await makeRequest(endpoint, 'POST', body);
+    return json;
+  };
+}
+
+
+
 export async function getMySubmissionsForAssignment({ slug, assignmentId }) {
   const endpoint = `courses/${slug}/assignments/${assignmentId}/submissions/`;
   const json = await makeRequest(endpoint);

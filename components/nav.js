@@ -1,8 +1,6 @@
 'use client';
 
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
+import { Nav, Navbar, Container } from 'react-bootstrap';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useQuery } from 'react-query';
@@ -44,9 +42,8 @@ function Navigation() {
             {piece && <NavActivityPicker />}
           </Nav>
           <Nav>
-            <Link href="/about" passHref legacyBehavior>
-              <Nav.Link>About</Nav.Link>
-            </Link>
+            <Link href="/pieces/new" passHref legacyBehavior><Nav.Link>Create A Piece</Nav.Link></Link>
+            <Link href="/about" passHref legacyBehavior><Nav.Link>About</Nav.Link></Link>
             <LoginOut />
           </Nav>
         </Navbar.Collapse>

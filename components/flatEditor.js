@@ -314,7 +314,7 @@ function FlatEditor({
                       if (
                         Object.hasOwn(
                           scoreData['score-partwise'].part[0].measure[
-                            ev.measureIdx
+                          ev.measureIdx
                           ],
                           'harmony',
                         )
@@ -331,7 +331,7 @@ function FlatEditor({
                       if (
                         !Object.hasOwn(
                           scoreData['score-partwise'].part[0].measure[
-                            ev.measureIdx
+                          ev.measureIdx
                           ],
                           'attributes',
                         )
@@ -373,7 +373,7 @@ function FlatEditor({
                       if (
                         Object.hasOwn(
                           scoreData['score-partwise'].part[0].measure[
-                            ev.measureIdx
+                          ev.measureIdx
                           ],
                           'barline',
                         )
